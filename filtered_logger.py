@@ -3,7 +3,7 @@
 import os
 import re
 import logging
-import mysql.connector
+# import mysql.connector
 from typing import List
 
 ptrns = {
@@ -31,5 +31,5 @@ def filter_datum(
     filter_datum should be less than 5 lines long and use re.sub to perform the
     substitution with a single regex.
     """
-    extract, replace = (patterns["extract"], patterns["replace"])
+    extract, replace = (ptrns["extract"], ptrns["replace"])
     return re.sub(extract(fields, separator), replace(redaction), message)
