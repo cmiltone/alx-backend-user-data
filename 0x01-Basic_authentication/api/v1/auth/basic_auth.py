@@ -66,7 +66,7 @@ class BasicAuth(Auth):
             self,
             user_email: str,
             user_pwd: str) -> TypeVar('User'):
-        """eturns the User instance based on his email and password"""
+        """returns the User instance based on his email and password"""
         if type(user_email) == str and type(user_pwd) == str:
             try:
                 users = User.search({'email': user_email})
